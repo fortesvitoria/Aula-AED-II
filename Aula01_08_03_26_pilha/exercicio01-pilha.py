@@ -5,7 +5,7 @@ class Pino:
         self.topo = None
 
     def pino_vazio(self):
-        if self.topo is None:
+        if self.argola is None:
             return True
         return False
 
@@ -19,12 +19,8 @@ class Pino:
         self.topo = argola_nova
 
     def imprimir(self):
-        print("\n-------- Pilha --------\n")
-        if self.topo is None:
-            print("-------- Pilha vazia --------\n")
-            return 
         while self.argola: 
-            print (f'Valor: {self.argola.valor} - Endereço: {id(self.argola)} - Próximo: {id(self.argola.proximo)}')
+            print (f'Valor: {self.argola.valor} - Endereço: {self.argola} - Próximo: {self.argola.proximo}')
             self.argola = self.argola.proximo
         print(f"{"-"*25}")
 
@@ -39,6 +35,7 @@ a2 = Argola(20)
 a3 = Argola(30)
 
 pino = Pino()
+
 pino.add(a1)
 pino.add(a2)
 pino.add(a3)
