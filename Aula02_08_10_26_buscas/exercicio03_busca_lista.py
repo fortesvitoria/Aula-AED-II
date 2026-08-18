@@ -1,6 +1,7 @@
 '''
 Criar uma estrutura de dados com classes nodo e lista, e criar um método que localize o elemento na lista, retornando o elemento e sua posição na estrutura de dados.
 '''
+#busca em lista encadeada  --- sequencial
 import random
 import exercicio01_gerador_lista as gl 
 lista_gerada = gl.gerador_de_lista(10,20)
