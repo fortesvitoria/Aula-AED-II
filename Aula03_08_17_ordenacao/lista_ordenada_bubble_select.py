@@ -22,6 +22,24 @@ class Lista:
                 atual = atual.proximo
             atual.proximo = novo_nodo
 
+    def ordem_crescente_select_sort(self):
+        atual = self.inicio #atual recebe inicio/head
+
+        while atual is not None: #enquanto atual nao for vazio
+            menor = atual #menor recebe o atual
+            proximo = atual.proximo #proximo recebe o proximo do atual
+
+            while proximo is not None: #enquanto o proximo nao for vazio
+                if proximo.dado < menor.dado: #se o dado do proximo for menor que o dado da variavel menor
+                    menor = proximo #menor recebe o proximo
+                proximo = proximo.proximo #proximo recebe o proximo do proximo/avança na busca pelo menor
+
+            if menor != atual: # se o menor for diferetente do atual, troca
+                atual.dado, menor.dado = menor.dado, atual.dado
+                # print (f'Troca atual {menor.dado} - menor {atual.dado}')
+
+            atual = atual.proximo #atual recebe o proximo do atual/avança o inicio da parte ainda nao ordenada
+
     def ordem_crescente_bubble_sort(self):
         if self.inicio is None:
             return
@@ -40,6 +58,8 @@ class Lista:
                         atual.dado
                     )
                     trocou = True #flag vira true
+                    print(atual.dado)
+                    print(atual.proximo.dado)
 
                 atual = atual.proximo #atual avança para o próximo nodo.
 
@@ -63,7 +83,8 @@ for numero in lista_gerada:
 print(f"Lista gerada: {lista_gerada}")
 
 # ordenando
-lista_encadeada.ordem_crescente_bubble_sort()
+# lista_encadeada.ordem_crescente_bubble_sort()
+lista_encadeada.ordem_crescente_select_sort()
 
 # mostra a lista ordenada
 atual = lista_encadeada.inicio #variavel atual recebe inicio da lista
