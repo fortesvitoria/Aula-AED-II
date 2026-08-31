@@ -63,6 +63,28 @@ class Lista:
 
                 atual = atual.proximo #atual avança para o próximo nodo.
 
+    def insertion_sort(self):
+        # 1. [5,3,4,1]
+        atual = self.inicio.proximo #comecamos pelo segundo 1. atual = 3
+
+        while atual is not None:
+            valor = atual.dado #guarda valor que quero inserir na posição correta 1. valor=3
+            anterior = self.inicio #anterior recebe o inicio 1. anterior = 5
+
+            while anterior != atual and anterior.dado <= atual.dado: #procura onde deve estar
+                #1. 5<=3 False, ant-5, atual-3, val-3
+                anterior = anterior.proximo
+
+            if anterior != atual: #quando encontramos posição anterior, vamos deslocando os valores - 1. true
+                while anterior.proximo != atual: #anterior.proximo é o atual - 3, entao False, while nao excecuta
+                    anterior.dado, valor = valor, anterior.dado
+                    anterior = anterior.proximo
+
+                atual.dado = valor #coloca valor guadado na posição que sobrou 1. atual = 3
+
+            atual = atual.proximo
+
+
     def buscar(self, valor):
         atual = self.inicio
         posicao = 0
@@ -82,9 +104,17 @@ for numero in lista_gerada:
 
 print(f"Lista gerada: {lista_gerada}")
 
-# ordenando
+
+# SELECT SORT
+
+# ordenando BUBBLE
 # lista_encadeada.ordem_crescente_bubble_sort()
-lista_encadeada.ordem_crescente_select_sort()
+
+# ordenando SELECT
+# lista_encadeada.ordem_crescente_select_sort()
+
+# ordenando INSERT
+lista_encadeada.insertion_sort()
 
 # mostra a lista ordenada
 atual = lista_encadeada.inicio #variavel atual recebe inicio da lista
