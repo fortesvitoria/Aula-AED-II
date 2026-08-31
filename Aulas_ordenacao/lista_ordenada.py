@@ -64,25 +64,29 @@ class Lista:
                 atual = atual.proximo #atual avança para o próximo nodo.
 
     def insertion_sort(self):
-        # 1. [5,3,4,1]
-        atual = self.inicio.proximo #comecamos pelo segundo 1. atual = 3
+        if self.inicio is None or self.inicio.proximo is None:
+            return
 
-        while atual is not None:
-            valor = atual.dado #guarda valor que quero inserir na posição correta 1. valor=3
-            anterior = self.inicio #anterior recebe o inicio 1. anterior = 5
+        ordenada = None
+        atual = self.inicio
 
-            while anterior != atual and anterior.dado <= atual.dado: #procura onde deve estar
-                #1. 5<=3 False, ant-5, atual-3, val-3
-                anterior = anterior.proximo
+        while atual:
+            proximo = atual.proximo
 
-            if anterior != atual: #quando encontramos posição anterior, vamos deslocando os valores - 1. true
-                while anterior.proximo != atual: #anterior.proximo é o atual - 3, entao False, while nao excecuta
-                    anterior.dado, valor = valor, anterior.dado
-                    anterior = anterior.proximo
+            if ordenada is None or atual.dado <= ordenada.dado:
+                atual.proximo = ordenada
+                ordenada = atual
+            else:
+                pos = ordenada
+                while pos.proximo and pos.proximo.dado < atual.dado:
+                    pos = pos.proximo
+                atual.proximo = pos.proximo
+                pos.proximo = atual
 
-                atual.dado = valor #coloca valor guadado na posição que sobrou 1. atual = 3
+            atual = proximo
 
-            atual = atual.proximo
+        self.inicio = ordenada
+        
 
 
     def buscar(self, valor):
