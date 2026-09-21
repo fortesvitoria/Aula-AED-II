@@ -1,0 +1,129 @@
+{
+  "nome": "usuario",
+  "tipo": "diretorio",
+  "filhos": [
+    {
+      "nome": "documentos",
+      "tipo": "diretorio",
+      "filhos": [
+        {
+          "nome": "faculdade",
+          "tipo": "diretorio",
+          "filhos": [
+            {
+              "nome": "algoritmos",
+              "tipo": "diretorio",
+              "filhos": [
+                {"nome": "estruturas.py", "tipo": "arquivo", "tamanho": 12500},
+                {"nome": "arvores.pdf", "tipo": "arquivo", "tamanho": 850000},
+                {"nome": "grafos.pdf", "tipo": "arquivo", "tamanho": 920000}
+              ]
+            },
+            {
+              "nome": "banco_de_dados",
+              "tipo": "diretorio",
+              "filhos": [
+                {"nome": "modelo_er.pdf", "tipo": "arquivo", "tamanho": 480000},
+                {"nome": "consultas.sql", "tipo": "arquivo", "tamanho": 8300}
+              ]
+            },
+            {"nome": "horarios.txt", "tipo": "arquivo", "tamanho": 2100}
+          ]
+        },
+        {
+          "nome": "trabalho",
+          "tipo": "diretorio",
+          "filhos": [
+            {"nome": "relatorio.docx", "tipo": "arquivo", "tamanho": 135000},
+            {"nome": "apresentacao.pptx", "tipo": "arquivo", "tamanho": 2450000},
+            {"nome": "dados.csv", "tipo": "arquivo", "tamanho": 78500}
+          ]
+        },
+        {"nome": "notas.txt", "tipo": "arquivo", "tamanho": 3200}
+      ]
+    },
+    {
+      "nome": "imagens",
+      "tipo": "diretorio",
+      "filhos": [
+        {
+          "nome": "viagens",
+          "tipo": "diretorio",
+          "filhos": [
+            {"nome": "serra.jpg", "tipo": "arquivo", "tamanho": 3250000},
+            {"nome": "praia.jpg", "tipo": "arquivo", "tamanho": 2980000},
+            {"nome": "cidade.png", "tipo": "arquivo", "tamanho": 1750000}
+          ]
+        },
+        {"nome": "perfil.png", "tipo": "arquivo", "tamanho": 580000},
+        {"nome": "logo.svg", "tipo": "arquivo", "tamanho": 42500}
+      ]
+    },
+    {
+      "nome": "downloads",
+      "tipo": "diretorio",
+      "filhos": [
+        {
+          "nome": "programas",
+          "tipo": "diretorio",
+          "filhos": [
+            {
+              "nome": "editores",
+              "tipo": "diretorio",
+              "filhos": [
+                {"nome": "editor.zip", "tipo": "arquivo", "tamanho": 12500000}
+              ]
+            },
+            {"nome": "utilitario.zip", "tipo": "arquivo", "tamanho": 8750000}
+          ]
+        },
+        {
+          "nome": "livros",
+          "tipo": "diretorio",
+          "filhos": [
+            {"nome": "python.pdf", "tipo": "arquivo", "tamanho": 5600000},
+            {"nome": "algoritmos.pdf", "tipo": "arquivo", "tamanho": 7200000},
+            {"nome": "redes.pdf", "tipo": "arquivo", "tamanho": 4300000}
+          ]
+        },
+        {"nome": "manual.pdf", "tipo": "arquivo", "tamanho": 1500000}
+      ]
+    },
+    {
+      "nome": "projetos",
+      "tipo": "diretorio",
+      "filhos": [
+        {
+          "nome": "projeto_python",
+          "tipo": "diretorio",
+          "filhos": [
+            {"nome": "main.py", "tipo": "arquivo", "tamanho": 5400},
+            {"nome": "arvore.py", "tipo": "arquivo", "tamanho": 8700},
+            {"nome": "README.md", "tipo": "arquivo", "tamanho": 2600}
+          ]
+        },
+        {
+          "nome": "projeto_web",
+          "tipo": "diretorio",
+          "filhos": [
+            {"nome": "index.html", "tipo": "arquivo", "tamanho": 9200},
+            {"nome": "estilo.css", "tipo": "arquivo", "tamanho": 6100},
+            {"nome": "app.js", "tipo": "arquivo", "tamanho": 11400}
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "temporario",
+      "tipo": "diretorio",
+      "filhos": []
+    },
+    {
+      "nome": "configuracoes",
+      "tipo": "diretorio",
+      "filhos": [
+        {"nome": "preferencias.json", "tipo": "arquivo", "tamanho": 1800}
+      ]
+    }
+  ]
+}

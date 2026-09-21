@@ -1,0 +1,59 @@
+Leia o arquivo e construa dinamicamente uma árvore genérica que represente a hierarquia indicada.
+
+Cada elemento possui os seguintes atributos:
+
+nome: nome do arquivo ou diretório;
+tipo: poderá assumir os valores "arquivo" ou "diretorio";
+tamanho: tamanho do arquivo em bytes, presente nos elementos do tipo arquivo;
+filhos: lista contendo os elementos pertencentes a um diretório.
+
+
+Programa Principal:
+
+============== ÁRVORE DE ARQUIVOS ==============
+
+1 - Mostrar árvore em pré-ordem
+
+2 - Mostrar árvore em pós-ordem
+
+3 - Buscar arquivo ou diretório
+
+4 - Mostrar altura da árvore
+
+5 - Consultar profundidade
+
+6 - Mostrar folhas
+
+7 - Mostrar caminho de um elemento
+
+8 - Calcular tamanho de um diretório
+
+9 - Buscar arquivos por extensão
+
+10 - Mostrar estatísticas
+
+11 - Diretório com maior número de arquivos
+
+0 - Encerrar
+
+Opção:
+
+
+
+==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Opção 10 - Mostrar Estatísticas
+
+Estatísticas:
+
+Quantidade total de nós:
+
+Quantidade de arquivos:
+
+Quantidade de diretórios:
+
+Quantidade de nós folha:
+
+Altura da árvore:
+
+Tamanho total dos arquivos:
