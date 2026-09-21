@@ -24,7 +24,7 @@ def counting_sort_por_digito(lista, exp):
     for i in range(1, 10):
         contagem[i] += contagem[i - 1]
 
-    # constroi o array de saíia (de tres para frente para manter estabilidade)
+    # constroi o array de saida (de tres para frente para manter estabilidade)
     for i in range(n - 1, -1, -1):
         digito = (lista[i] // exp) % 10
         saida[contagem[digito] - 1] = lista[i]
