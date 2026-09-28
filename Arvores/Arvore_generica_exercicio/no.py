@@ -28,7 +28,7 @@ def pre_ordem(no, nivel = 0):
         return
 
     #visita o no atual e imprime
-    indenta = "-" * nivel
+    indenta = "." * nivel
     info_tamanho = f"({no.tamanho} bytes)" if no.tamanho is not None else ""
     print(f"{indenta} [{no.tipo.upper()}] {no.nome} {info_tamanho}")
 
