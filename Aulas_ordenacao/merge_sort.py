@@ -10,8 +10,9 @@ Ele funciona em três etapas básicas:
 
 '''
 
-import exercicio01_gerador_lista as gl 
-lista_gerada = gl.gerador_de_lista(10,20)
+# import exercicio01_gerador_lista as gl 
+# lista_gerada = gl.gerador_de_lista(10,20)
+lista_gerada = [8,3,5,2]
 
 def merge_sort(lista):
     # se a lista tiver 1 ou 0 elementos, ja esta ordenada
