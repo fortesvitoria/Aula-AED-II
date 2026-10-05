@@ -68,5 +68,5 @@ def adicionar_ramo(arvore):
 
 
 
-arvore = Arvore()
-adicionar_ramo(arvore)
+# arvore = Arvore()
+# adicionar_ramo(arvore)

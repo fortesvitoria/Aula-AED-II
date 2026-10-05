@@ -1,0 +1,92 @@
+Motores de busca, corretores ortográficos e sistemas de análise textual precisam localizar rapidamente palavras em grandes volumes de texto.
+
+Uma forma simples de construir um índice de palavras é armazenar cada palavra em uma Árvore Binária de Busca (ABB). Dessa forma, é possível consultar palavras e suas frequências de ocorrência de maneira eficiente.
+
+Seu objetivo será desenvolver um sistema capaz de analisar um texto e gerar um índice contendo todas as palavras encontradas.
+
+Objetivo
+Implementar uma Árvore Binária de Busca na qual cada nó representa uma palavra distinta encontrada em um texto.
+
+Cada nó da árvore deve armazenar:
+
+- Palavra
+- Quantidade de ocorrências da palavra no texto
+
+Regras
+Antes de inserir uma palavra na árvore:
+
+Converter todos os caracteres para minúsculo.
+Remover sinais de pontuação.
+A árvore deve estar organizada em ordem alfabética.
+
+A comparação entre os nós deve ser feita utilizando a palavra armazenada.
+
+Inserção
+Ao ler uma palavra:
+
+Se ela ainda não existir na árvore, criar um novo nó.
+Se ela já existir, incrementar seu contador de ocorrências.
+Busca
+
+Permitir que o usuário informe uma palavra.
+
+Listagem em Ordem Alfabética
+Utilizando o percurso em ordem (in-order), exibir todas as palavras cadastradas.
+
+Estatísticas do Texto
+O programa deve informar:
+
+Total de palavras lidas.
+Total de palavras distintas.
+Palavra mais frequente.
+Quantidade de ocorrências da palavra mais frequente.
+Informações da Árvore
+Implementar funções para calcular:
+
+Altura da árvore.
+Quantidade de nós.
+Quantidade de folhas.
+Entrada de Dados
+O texto poderá ser:
+
+Digitado pelo usuário ou
+Lido a partir de um arquivo texto.
+
+
+
+
+Desafio:
+Implemente uma função para exibir as 10 palavras mais frequentes do texto.
+
+Não é permitido utilizar estruturas prontas de mapa/dicionário (HashMap, TreeMap, Dictionary etc.).
+
+Toda a indexação deve ser realizada utilizando a Árvore Binária de Busca
+
+
+
+
+
+    def menu(self):
+
+        while True:
+
+            print("\n===== MENU =====")
+
+            print("1 - Digitar texto")
+
+            print("2 - Ler arquivo")
+
+            print("3 - Buscar palavra")
+
+            print("4 - Exibir índice")
+
+            print("5 - Mostrar estatísticas")
+
+            print("6 - Mostrar informações da árvore")
+
+            print("0 - Sair")
+
+
+
+            opcao = input("Escolha uma opção: ")
+
