@@ -61,19 +61,18 @@ class ArvoreBinaria:
 
     def imprimir_em_ordem(self, no=None, primeira_chamada=True):
         if primeira_chamada and self.raiz is None:
-                print("\n------ Árvore vazia ------")
-                return
+            print("\n------ Árvore vazia ------")
+            return
 
-        if no is None:
+        if primeira_chamada:
             no = self.raiz
 
-        if no.esquerda is not None:
-            self.imprimir_em_ordem(no.esquerda, False)
+        if no is None:
+            return
 
-            print(f"Palavra: {no.palavra} | Frequência: {no.frequencia}")
-
-        if no.direita is not None:
-            self.imprimir_em_ordem(no.direita, False)
+        self.imprimir_em_ordem(no.esquerda, False)
+        print(f"Palavra: {no.palavra} | Frequência: {no.frequencia}")
+        self.imprimir_em_ordem(no.direita, False)
 
     def contar_nos(self,no=None, primeira_chamada=True):
         if primeira_chamada:
@@ -144,14 +143,14 @@ def main():
     arvore = None
     
     while True:
-        print("\n===== MENU DO ÍNDICE REMISSIVO =====")
+        print("\n===== MENU =====")
         print("1 - Iniciar nova árvore com Texto Digitado")
         print("2 - Iniciar nova árvore lendo de um Arquivo Texto")
         print("3 - Buscar palavra")
-        print("4 - Exibir índice (Ordem Alfabética)")
+        print("4 - Exibir índice em ordem alfabética")
         print("5 - Mostrar estatísticas do texto")
         print("6 - Mostrar informações da árvore")
-        print("7 - Exibir as 10 palavras mais frequentes (Desafio)")
+        print("7 - Exibir as 10 palavras mais frequentes")
         print("0 - Sair")
 
         opcao = input("Escolha uma opção: ").strip()
