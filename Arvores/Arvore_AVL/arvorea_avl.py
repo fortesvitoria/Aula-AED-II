@@ -208,3 +208,7 @@ arvore.remover_no(53)
 
 print("\nLista árvore AVL após remover 53: ")
 arvore.percorrer_em_ordem(arvore.raiz)
+
+arvore.adicionar_no(10)
+print("\nLista árvore AVL após adicionar 10: ")
+arvore.percorrer_em_ordem(arvore.raiz)
