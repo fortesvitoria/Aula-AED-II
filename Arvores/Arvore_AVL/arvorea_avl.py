@@ -101,6 +101,92 @@ class ArvoreAVL:
             print(no.valor, end=" ")
             self.percorrer_em_ordem(no.direita)
 
+    # REMOÇÃO DE NÓS
+
+    # Encontra o menor valor de uma subárvore
+    def _menor_valor(self, no):
+        atual = no
+
+        while atual.esquerda:
+            atual = atual.esquerda
+
+        return atual
+
+    # Método que inicia a remoção de um número
+    def remover_no(self, valor):
+
+        self.raiz = self._remover_no(self.raiz, valor)
+
+    # Método responsável por remover o nó
+    def _remover_no(self, no_atual, valor):
+
+        if not no_atual:
+            return no_atual
+        if valor < no_atual.valor:
+            no_atual.esquerda = self._remover_no(
+                no_atual.esquerda, valor
+            )
+
+        elif valor > no_atual.valor:
+            no_atual.direita = self._remover_no(
+                no_atual.direita, valor
+            )
+
+        else:
+            if not no_atual.esquerda:
+                return no_atual.direita
+
+            elif not no_atual.direita:
+                return no_atual.esquerda
+
+            else:
+
+                # Encontra o menor valor da subárvore direita
+                temp = self._menor_valor(no_atual.direita)
+
+                # Substitui o valor do nó pelo menor valor encontrado
+                no_atual.valor = temp.valor
+
+                # Remove o nó que foi utilizado como substituto
+                no_atual.direita = self._remover_no(
+                    no_atual.direita, temp.valor
+                )
+
+        # Atualiza a altura do nó
+        no_atual.altura = 1 + max(
+            self._altura(no_atual.esquerda),
+            self._altura(no_atual.direita)
+        )
+
+        # Calcula o fator de balanceamento
+        balanceamento = self._balanceamento(no_atual)
+
+        # caso esquerda-esquerda
+        if balanceamento > 1 and self._balanceamento(no_atual.esquerda) >= 0:
+            return self._rotacao_direita(no_atual)
+
+        # caso esquerda-direita
+        if balanceamento > 1 and self._balanceamento(no_atual.esquerda) < 0:
+            no_atual.esquerda = self._rotacao_esquerda(
+                no_atual.esquerda
+            )
+            return self._rotacao_direita(no_atual)
+
+        # caso direita-direita
+        if balanceamento < -1 and self._balanceamento(no_atual.direita) <= 0:
+            return self._rotacao_esquerda(no_atual)
+
+        # caso direita-esquerda
+        if balanceamento < -1 and self._balanceamento(no_atual.direita) > 0:
+            no_atual.direita = self._rotacao_direita(
+                no_atual.direita
+            )
+            return self._rotacao_esquerda(no_atual)
+
+        # Retorna o nó atualizado
+        return no_atual
+
+
 numeros = [7, 80, 17, 99, 45, 53, 12]
 
 arvore = ArvoreAVL()
@@ -111,4 +197,14 @@ for numero in numeros:
 print("Lista original:\n", numeros)
 
 print("\nLista árvore AVL: ")
+arvore.percorrer_em_ordem(arvore.raiz)
+
+arvore.remover_no(17)
+
+print("\nLista árvore AVL após remover 17: ")
+arvore.percorrer_em_ordem(arvore.raiz)
+
+arvore.remover_no(53)
+
+print("\nLista árvore AVL após remover 53: ")
 arvore.percorrer_em_ordem(arvore.raiz)
