@@ -1,0 +1,164 @@
+Enunciado Tarefa Final
+Competências a serem avaliadas:
+
+- Autonomia em aprender sozinho
+
+- Desenvolver uma solução para o problema proposto
+
+- Saber Aplicar o que foi estudado
+
+
+
+
+
+Sistema de Rotas para Entregas
+
+===============================
+
+
+
+A empres ACME-LTDA deseja determinar o caminho mais curto entre centros de distribuição 
+
+localizados em diferentes cidades.
+
+As cidades serão representadas por um grafo ponderado.
+
+Cada vértice representa uma cidade.
+
+Cada aresta representa uma estrada com uma distância em quilômetros.
+
+
+
+--- O sistema deve receber:
+
+  cidades, estradas, cidade de origem, cidade de destino
+
+
+
+e informar:
+
+  - menor distância
+
+  - caminho percorrido
+
+
+
+--- Requisitos Obrigatórios
+
+Parte 1 - Estrutura do Grafo
+
+  Implementar uma classe Grafo utilizando lista de adjacência
+
+
+
+  Exemplo:
+
+      {
+
+      "cidadeA": [("cidadeB", 4), ("cidadeC", 2)],
+
+      "cidadeB": [("cidadeD", 5)],
+
+      "cidadeC": [("cidadeD", 8)]
+
+      }
+
+
+
+Parte 2 - Algoritmo
+
+  Implementar o algoritmo de Dijkstra.
+
+
+
+  O algoritmo deve retornar:
+
+    - distancia_total
+
+    - caminho
+
+ 
+
+  Exemplo:
+
+    Distância Percorrida: 12 km
+
+     
+
+    Caminho:
+
+      Porto Alegre
+
+      - Canoas
+
+      - Novo Hamburgo
+
+      - São Leopoldo
+
+
+
+Parte 3 - Arquivo de Entrada
+
+  Ler os dados de um arquivo.
+
+
+
+  Exemplo:
+
+    cidade cidade
+
+    origem destino distância
+
+      A  B    5
+
+      A  C    2
+
+      B  D    4
+
+      C  D    7
+
+      C  E    3
+
+      E  D    1
+
+
+
+    Porto Alegre -> São Leopoldo (35)
+
+    São Leopoldo -> Novo Hamburgo (10)
+
+    Novo Hamburgo -> Nova Petrópolis (45)
+
+    Nova Petrópolis -> Gramado (35)
+
+    Gramado -> Canela (8)
+
+    Canela -> Caxias do Sul (75)
+
+    Caxias do Sul -> Bento Gonçalves (40)
+
+    Bento Gonçalves -> Garibaldi (15)
+
+    Garibaldi -> Carlos Barbosa (8)
+
+    Novo Hamburgo -> Caxias do Sul (70)
+
+    Gramado -> Bento Gonçalves (110)
+
+
+
+
+
+Parte 4 - Final
+
+  Entregue 2 coisas: O algoritmos funcionando e a explicação.
+
+  Explicação em aula ou em video:
+
+    Como o grafo foi representado.
+
+    Como funciona o Dijkstra.
+
+    Limitações do algoritmo de dikstra.
+
+    Qual(is) outro(s) algoritmo(s) também poderia(m) ser utilizado(s)
